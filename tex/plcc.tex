@@ -1,0 +1,261 @@
+\documentclass{jsarticle}
+%\pagestyle{empty}%ページ非表示
+%usepackage{fancyhdr}%ヘッダ
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[top=30truemm,bottom=30truemm,left=20truemm,right=20truemm]{geometry}
+\begin{document}
+%ここから
+
+\title{PLCによるシーケンス制御}
+\author{筒居 稔}
+\maketitle
+
+%\lhead{左ヘッダ}
+%\chead{中央ヘッダ}
+%\rhead{右ヘッダ}
+
+%\part*{部}
+%\chapter*{章}
+\section{実験目的}
+シーケンス制御とは、あらかじめ定められた動作順序にしたがって、機械や装置を制御するこ
+とをいう。シーケンス制御には有接点リレー方式、無接点リレー方式、マイクロコンピュータ方
+式などがある。本実験では、シーケンス図やラダー図を理解し、マイクロコンピュータを利用し
+た制御装置であるプログラマブル・ロジック・コントローラを使用した制御方法を習得する。
+%\subsection*{小節}
+%\subsubsection*{少々節}
+%改行\\
+%\par
+%改ページ\newpage
+\section{実験機器}
+\begin{table}[hbtp]
+ \caption{使用機器}
+ \centering
+  \begin{tabular}{|c|c|c|}\hline
+  機器名&メーカー&製品名\\ \hline\hline
+  PLC&三菱&FX2-32MT-SIM\\ \hline
+  \end{tabular}
+
+ \caption{PLCの構成要素}
+ \centering
+  \begin{tabular}{|c||c|}\hline
+  入力リレー&x0〜x7\\ \hline
+  出力リレー&y20〜y27\\ \hline
+  タイマ(100ms)&t0~t199\\ \hline
+  タイマ(10ms)&t200~t245\\ \hline
+  \end{tabular}
+\end{table}
+\section{原理}
+PLC(シーケンサ)内にはリレー、タイマ、カウンタ等の機能が組み込まれており、
+マイクロコンピュータを利用する電子制御装置である。
+PLCと入出力機器はスイッチや各種センサなどの機器を入力とし、
+ランプやブザー、電力開閉器等の機器を出力して制御する。
+\section{方法}
+AND回路,OR回路,自己保持回路について,
+真理値表,タイムチャート,シーケンス図,ラーダ図を作成する。\par
+先行優先回路,新入力優先回路,フリッカ回路について,
+タイムチャート,シーケンス図,ラダー図を作成する。\par
+それぞれラダー図を元にプログラムを作成し実行する。\newpage
+\section{結果}
+実験方法の手順に従い、真理地表、タイムチャート、
+シーケンス図、ラダー図を作成し、
+ラダー図を元にプログラムを作成、
+実行して正しく動作することをを確認した。
+
+\subsection{AND回路}
+\begin{table}[hbtp]
+ \caption{AND回路真理値表}
+ \centering
+ \begin{tabular}{|c|c|c|}\hline
+ BS1&BS2&SL1\\ \hline\hline
+ 0&0&0\\ \hline
+ 0&1&0\\ \hline
+ 1&0&0\\ \hline
+ 1&1&1\\ \hline
+ \end{tabular}
+\end{table}
+
+\begin{figure}[hbtp]
+ \centering
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+\end{figure}
+\begin{figure}[hbtp]
+ \caption{AND回路シーケンス図}
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{AND回路タイムチャート}
+\end{figure}
+\begin{figure}[hbtp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{AND回路ラダー図}
+\end{figure}
+\begin{figure}[hbtp]
+\centering
+\begin{tabular}{rl}
+LD&X1\\
+AND&X2\\
+OUT&Y21\\
+END&\\
+\end{tabular}
+\caption{AND回路プログラム}
+\end{figure}
+\newpage
+\subsection{OR回路}
+\begin{table}[hbtp]
+ \centering
+ \caption{OR回路真理値表}
+ \begin{tabular}{|c|c|c|}\hline
+ BS1&BS2&SL1\\ \hline\hline
+ 0&0&0\\ \hline
+ 0&1&1\\ \hline
+ 1&0&1\\ \hline
+ 1&1&1\\ \hline
+ \end{tabular}
+\end{table}
+
+\begin{figure}[hbtp]
+ \centering
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{OR回路シーケンス図}
+\end{figure}
+
+\begin{figure}[hbtp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{OR回路タイムチャート}
+\end{figure}
+\begin{figure}[hbtp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{OR回路ラダー図}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\begin{tabular}{rl}
+LD&X1\\
+OR&X2\\
+OUT&Y21\\
+END&\\
+\end{tabular}
+\caption{OR回路プログラム}
+\end{figure}
+\newpage
+\subsection{自己保持回路}
+\begin{table}[hbtp]
+ \centering
+ \caption{自己保持回路真理値表}
+ \begin{tabular}{|c|c|}\hline
+ BS1&SL1\\ \hline\hline
+ 0&直前の状態を保持\\ \hline
+ 1&1\\ \hline
+ \end{tabular}
+\end{table}
+
+\begin{figure}[hbtp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{自己保持回路シーケンス図}
+\end{figure}
+\begin{figure}[hbtp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{自己保持回路タイムチャート}
+\end{figure}
+\begin{figure}[hbtp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{自己保持回路ラダー図}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\begin{tabular}{rl}
+LD&X1\\
+OR&Y21\\
+OUT&Y21\\
+END&\\
+\end{tabular}
+\caption{自己保持回路プログラム}
+\end{figure}
+\newpage
+\subsection{先行優先回路}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{先行優先回路シーケンス図}
+\end{figure}
+\begin{figure}[htbp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{先行優先回路タイムチャート}
+\end{figure}
+\begin{figure}[htbp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{先行優先回路ラダー図}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\begin{tabular}{rl}
+LD&X1\\
+OR&Y21\\
+ANI&Y22\\
+OUT&Y21\\
+LD&X2\\
+OR&Y22\\
+ANI&Y21\\
+OUT&Y22\\
+END&\\
+\end{tabular}
+\caption{先行優先回路プログラム}
+\end{figure}
+
+\subsection{新入力優先回路}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{新入力優先回路シーケンス図}
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{新入力優先回路タイムチャート}
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{新入力優先回路ラダー図}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\begin{tabular}{rl}
+LD&X1\\
+LD&Y21\\
+ANI&Y22\\
+ORB&\\
+OUT&Y21\\
+LD&X2\\
+LD&Y22\\
+ANI&Y21\\
+ORB&\\
+OUT&Y22\\
+END&\\
+\end{tabular}
+\caption{新入力優先回路プログラム}
+\end{figure}
+\newpage
+\subsection{フリッカ回路}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{フリッカ回路シーケンス図}
+\end{figure}
+\begin{figure}[htbp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{フリッカ回路タイムチャート}
+\end{figure}
+\begin{figure}[htbp]
+ \includegraphics[scale=0.5]{/home/minoru/Desktop/sp.eps}
+ \caption{フリッカ回路ラダー図}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\begin{tabular}{rl}
+LD&X1\\
+ANI&T2\\
+OUT&T1\\
+K&005\\
+LD&T1\\
+OUT&Y21\\
+OUT&T2\\
+K&010\\
+END&\\
+\end{tabular}
+\caption{フリッカ回路プログラム}
+\end{figure}
+%ここまで
+\end{document}

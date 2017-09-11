@@ -1,0 +1,52 @@
+\documentclass{jsarticle}
+%\pagestyle{empty}%ページ非表示
+%usepackage{fancyhdr}%ヘッダ
+\usepackage[dvipdfmx]{graphicx,color}
+\definecolor{koyacolor}{rgb}{0.5,1,0.5}
+\usepackage[top=0truemm,bottom=0truemm,left=0truemm,right=0truemm]{geometry}
+\newcommand{\koya}[1]{
+		\fcolorbox{red}{koyacolor}{
+		\begin{minipage}{0.9\linewidth}
+				\begin{center}
+						\it \LAGE \textcolor{black}{\underline{DJKOYA 元気イッパイ!いきいきKOYAツアー}}\\
+				\end{center}
+				\small \textcolor{red}{
+						\begin{tabular}{rl}
+								主催：&こうやれこーず\\
+								協賛：&くら寿司\\
+								会場提供：&KUTC\\
+						\end{tabular}
+						}
+				\begin{flushleft}
+						\tiny \noindent 場内でのカメラ、
+						ビデオによる撮影、録音は
+						固くお断りしております。\\
+						台風豪雨等による悪天候の場合は
+						KOYAの自己判断により中止決行を決めます。\\
+				\end{flushleft}
+		\end{minipage}
+		}
+}
+\begin{document}
+%ここから
+
+%\lhead{左ヘッダ}
+%\chead{中央ヘッダ}
+%\rhead{右ヘッダ}
+
+%\title{DJ KOYA でびゅーらいぶ}
+%\author{DJ KOYA}
+%\maketitle
+
+%\part*{部}
+%\chapter*{章}
+%\section*{節}
+%\subsection*{小節}
+%\subsubsection*{少々節}
+%改行\\
+%\par
+%改ページ\newpage
+\koya{1}\par
+\koya{1}
+%ここまで
+\end{document}

@@ -1,0 +1,255 @@
+\documentclass{jsarticle}
+%\pagestyle{empty}%ページ非表示
+%usepackage{fancyhdr}%ヘッダ
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[top=30truemm,bottom=30truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage{listings,jlisting}
+\begin{document}
+%ここから
+
+%\lhead{左ヘッダ}
+%\chead{中央ヘッダ}
+%\rhead{右ヘッダ}
+
+\title{PICを用いたLEDの点灯回路の政策とその外部割り込み実験}
+\author{筒居 稔}
+\maketitle
+
+%\part*{部}
+%\chapter*{章}
+%\section*{節}
+%\subsection*{小節}
+%\subsubsection*{少々節}
+%改行\\
+%\par
+%改ページ\newpage
+
+\section{目的}
+PICを用いてLED点灯回路を制作し、その外部割込み実験とその応用を行う。
+Arduino等のマイコンによる電子制御回路を制作し、その動作確認実験を行う
+
+\section{原理}
+\subsection{マイコンの種類}
+\subsubsection{PIC}
+PICとは、ペリフェラル インターフェース コントローラーの略称であり、
+マイクロチップ・テクノロジー社が製造している。
+CPU・メモリ(RAM,ROM)、I/Oなどが1チップに全て収められている。
+ROMに書き込まれたプログラムによって制御する。
+プログラムコード用の内蔵メモリは、
+古くはワンタイムROM、EPROM(紫外線消去)品があったが、
+現在では大多数がフラッシュROM品となっている。
+
+\subsubsection{H8}
+H8は日立製作所(現在はルネサス エレクトロニクス)が
+開発したマイクロコントローラである。
+製品としてはCPUコアにROM、RAM、割り込みコントローラ、
+タイマ、入出力ポート、シリアルコントローラ(SCI)、
+A/Dコンバータ、D/Aコンバータ、DMA等が統合されたパッケージで販売される。
+開発言語はC/C++/アセンブラである。
+
+\subsubsection{AVR}
+AVRとは、Atmel社が製造している、RISCベースの8および
+32ビットマイクロコントローラ(制御用IC)製品群の総称である。
+PIC同様に回路構成が簡単でCPU、メモリ(RAM、ROM)、I/O、
+データ記憶用のEEPROM、クロック発信機、タイマ等が
+1チップに収められており、書き込まれたプログラムによって制御される。\par
+
+\subsection{PIC16F84A}
+PIC16F84Aとはマイクロチップのフラッシュマイコンである。
+1kバイトのメモリを搭載しており、
+1000回程度プログラムを即時消去し、簡単に書き換えられる。
+I/Oピン数は13であり、ピンごとに入出力設定が可能である。
+
+\subsection{Arduinoとは}
+Arduinoとは、Atmel AVRマイコンチップを実装した
+基板と開発システムから構成される、
+オープンソースハードウェアの一つである。
+開発システムはArduinoホームページからダウンロードでき、
+開発環境もオープンソース・マルチプラットフォーム対応なので
+Mac OS XやLinuxでも開発できる。\\
+開発環境ではC++風のArduono言語によりプログラムを開発する。
+
+\subsection{部品について}
+\subsubsection{セラミック発信機(セラロック)}
+多結晶体である電圧セラミックスの機械的共振を利用した、
+固有の周波数で発振する電子部品である。
+主な用途は、マイクロプロセッサ等の
+デジタル回路におけるクロック信号源である。
+
+\subsubsection{発光ダイオード}
+ダイオードの一種であり、順方向に電圧を
+加えた際に発行する半導体素子である。
+
+\section{使用機器}
+\begin{table}[thbp]
+		\caption{使用機器}
+		\centering
+		\label{kiki}
+		\begin{tabular}{|l|c|r|}\hline
+				使用機器名&型番&メーカー \\ \hline
+				ノートPC&FMV-A 8260&FUJITSU \\ \hline
+				デスクトップPC&CF-82&Pnasonic \\ \hline
+				Arduino&& \\ \hline
+		\end{tabular}
+\end{table}
+
+\section{方法}
+\subsection{PIC実験}
+PICマイコン回路を作成し、
+サンプルプログラムを動作させて、
+オリジナルの改良を加えて実行する
+以下のプログラムをPICマイコンに書き込み動作させた。
+
+\lstinputlisting[caption=サンプルプログラム,label=fuck]{/home/minoru/Desktop/zikken/first.c}
+\lstinputlisting[caption=オリジナルプログラム,label=hell]{/home/minoru/Desktop/zikken/second.c}
+
+\subsection{熱電対実験}
+熱電対の出力をAD変換し、USB経由でパソコンで電圧を測定する。
+
+\subsection{Arduin実験}
+Arduinoを用いて応用実験を行う。
+以下のプログラムをArduinoに書き込み実行した。
+\lstinputlisting[caption=施錠確認プログラム,label=shit]{/home/minoru/Desktop/ard/77/77.ino}
+
+\section{結果}
+\subsection{PIC実験}
+以下にサンプルプログラムと
+オリジナルプログラムの結果を示す。
+図\ref{sample}はサンプルプログラムの結果である。
+スイッチを押すとすべてのLED
+(写真の回路はハンダ付けが
+うまくできなかったため一部のLED以外)
+が点灯する。
+スイッチから手を離すと消灯する。\par
+
+図\ref{origin}、図\ref{origin2}はオリジナルプログラムの結果である。
+スイッチを押すと任意のLEDが点灯し、
+スイッチを離しても点灯し続ける。
+スイッチ2を押すと点灯していたLEDが消灯する。
+
+
+\begin{figure}[hbtp]
+ \begin{minipage}{0.3\hsize}
+ \begin{center}
+	\fbox{\includegraphics[width=5cm]{/home/minoru/Desktop/zikken/npic/6276122747302.jpg}}
+		\caption{サンプルプログラム結果}
+		\label{sample}
+ \end{center}
+ \end{minipage}
+ \begin{minipage}{0.3\hsize}
+ \begin{center}
+		\fbox{\includegraphics[width=5cm]{/home/minoru/Desktop/zikken/npic/6276122485853.jpg}}
+		 \caption{オリジナルプログラム}
+ \label{origin}
+ \end{center}
+ \end{minipage}
+ \begin{minipage}{0.3\hsize}
+ \begin{center}
+		\fbox{\includegraphics[width=5cm]{/home/minoru/Desktop/zikken/npic/6276122612221.jpg}}
+		 \caption{オリジナルプログラム2}
+ \label{origin2}
+ \end{center}
+ \end{minipage}
+\end{figure}
+
+\subsection{熱電対実験}
+\begin{figure}[Htbp]
+		\centering
+		\fbox{\includegraphics[width=14cm]{/home/minoru/Desktop/zikken/npic/1499113804266.jpg}}
+		\caption{0度}
+		\label{fir}
+\end{figure}
+\begin{figure}[Htbp]
+		\centering
+		\fbox{\includegraphics[width=14cm]{/home/minoru/Desktop/zikken/npic/1499113805609.jpg}}
+		\caption{24度}
+		\label{sec}
+\end{figure}
+\begin{figure}[Htbp]
+		\centering
+		\fbox{\includegraphics[width=14cm]{/home/minoru/Desktop/zikken/npic/1499113806803.jpg}}
+		\caption{100度}
+		\label{thr}
+\end{figure}
+測定した結果図\ref{fir}〜\ref{thr}のような結果が得られた。
+図\ref{fir}は0度、
+図\ref{sec}は24度
+図\ref{thr}は100度の時の結果である。
+
+\subsection{Arduino実験}
+Arduinoにソースコード\ref{shit}を
+書き込み実行した。\par
+
+\begin{figure}[htbp]
+		\begin{minipage}{0.5\hsize}
+				\begin{center}
+						\fbox{\includegraphics[width=5cm]{/home/minoru/Desktop/zikken/npic/6276123451596.jpg}}
+						\caption{Arduino結果1}
+						\label{ard1}
+				\end{center}
+		\end{minipage}
+		\begin{minipage}{0.5\hsize}
+				\begin{center}
+						\fbox{\includegraphics[width=5cm]{/home/minoru/Desktop/zikken/npic/6276123002092.jpg}}
+						\caption{Arduino結果2}
+						\label{ard2}
+				\end{center}
+		\end{minipage}
+\end{figure}
+
+プログラムの内容はサーボモータにより
+箱をロックするものである。\par
+図\ref{ard1}は箱が閉じられている時、
+図\ref{ard2}は箱が開いている時の結果である。
+
+\section{考察}
+\subsection{PIC}
+ソースコード\ref{fuck}とソースコード\ref{hell}の
+フローチャートを下に記す。
+
+\begin{figure}[Htbp]
+		\begin{minipage}{0.5\hsize}
+				\begin{center}
+						\fbox{\includegraphics[width=7cm]{/home/minoru/Desktop/firstprogram.png}}
+						\caption{サンプルプログラムフローチャート}
+						\label{flow1}
+				\end{center}
+		\end{minipage}
+		\begin{minipage}{0.5\hsize}
+				\begin{center}
+						\fbox{\includegraphics[width=10cm]{/home/minoru/Desktop/secondprogram.png}}
+						\caption{オリジナルプログラムフローチャート}
+						\label{flow2}
+				\end{center}
+		\end{minipage}
+\end{figure}
+
+サンプルプログラムではスイッチ1"RA3"を読み取り、
+入力が入ればwhile文でLEDを点灯させていた。\par
+オリジナルプログラムではスイッチ1"RA3"の他に、
+スイッチ2"RB0"を使い、
+while文の内部でスイッチ1と2の状態
+を読み取ることによりLEDの点灯、消灯を行う。
+
+\subsection{熱電対}
+図\ref{fir}〜\ref{thr}を比較すると。
+0度(図\ref{fir})では電圧は0[V]一定で変化は無かった。
+24度(図\ref{sec})と100度(\ref{thr})では互いに電圧が変化している。
+24度では電圧の値が最大で約0.00007[V]、
+最小で約0.00003[V]であるのに対して100度では、
+最大最小ともに約0.002[V]と温度が高くなるに連れて電圧が高く変化している。
+このことから温度が高くなると抵抗値が高くなると思われる。
+
+\subsection{Arduino}
+プログラム\ref{shit}では
+実行時は赤色LEDを点灯し1秒間ブザーを鳴らす。
+"number0fknocks"でスイッチの入力の回数を判断し、
+もし3回入力が入れば緑色LEDを点灯しサーボモータを90度回し、
+箱のlockを解除しシリアルモニタに"The box is unlocke!"
+と出力する。
+もう一度スイッチを入力するとサーボモータが90度回転し、
+赤色LEDが点灯、1秒間ブザーが鳴りシリアルモニタに
+"The box is locked!"と表示される。
+
+%ここまで
+\end{document}

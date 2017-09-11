@@ -1,0 +1,180 @@
+
+Discarded input sections
+
+ .comment       0x00000000       0x1d C:\Users\minor\AppData\Local\Temp\ccgITbEi.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+vectors          0x00000000         0x00000100
+rom              0x00000100         0x0007ff00
+ram              0x00ffdf10         0x00002000
+eight            0x00ffff00         0x00000100
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\Users\minor\AppData\Local\Temp\cclsU7Ec.o
+LOAD C:\Users\minor\AppData\Local\Temp\ccgITbEi.o
+LOAD C:\PROGRA~2\BestTech\GCCDEV~1\TARGET\3052F\libadd3052.a
+LOAD c:/progra~2/besttech/gccdev~1/gcc/h8/bin/../lib/gcc/h8300-elf/4.7-GNUH8_v12.02/../../../../h8300-elf/lib/h8300h\libm.a
+LOAD c:/progra~2/besttech/gccdev~1/gcc/h8/bin/../lib/gcc/h8300-elf/4.7-GNUH8_v12.02/h8300h\libgcc.a
+LOAD c:/progra~2/besttech/gccdev~1/gcc/h8/bin/../lib/gcc/h8300-elf/4.7-GNUH8_v12.02/../../../../h8300-elf/lib/h8300h\libc.a
+LOAD c:/progra~2/besttech/gccdev~1/gcc/h8/bin/../lib/gcc/h8300-elf/4.7-GNUH8_v12.02/h8300h\libgcc.a
+
+.vectors        0x00000000       0xf4
+                0x00000000        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000004        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000008        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x0000000c        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000010        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000014        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000018        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x0000001c        0x4 LONG 0x100 DEFINED (_int_nmi)?ABSOLUTE (_int_nmi):ABSOLUTE (_start)
+                0x00000020        0x4 LONG 0x100 DEFINED (_int_trap0)?ABSOLUTE (_int_trap0):ABSOLUTE (_start)
+                0x00000024        0x4 LONG 0x100 DEFINED (_int_trap1)?ABSOLUTE (_int_trap1):ABSOLUTE (_start)
+                0x00000028        0x4 LONG 0x100 DEFINED (_int_trap2)?ABSOLUTE (_int_trap2):ABSOLUTE (_start)
+                0x0000002c        0x4 LONG 0x100 DEFINED (_int_trap3)?ABSOLUTE (_int_trap3):ABSOLUTE (_start)
+                0x00000030        0x4 LONG 0x100 DEFINED (_int_irq0)?ABSOLUTE (_int_irq0):ABSOLUTE (_start)
+                0x00000034        0x4 LONG 0x100 DEFINED (_int_irq1)?ABSOLUTE (_int_irq1):ABSOLUTE (_start)
+                0x00000038        0x4 LONG 0x100 DEFINED (_int_irq2)?ABSOLUTE (_int_irq2):ABSOLUTE (_start)
+                0x0000003c        0x4 LONG 0x100 DEFINED (_int_irq3)?ABSOLUTE (_int_irq3):ABSOLUTE (_start)
+                0x00000040        0x4 LONG 0x100 DEFINED (_int_irq4)?ABSOLUTE (_int_irq4):ABSOLUTE (_start)
+                0x00000044        0x4 LONG 0x100 DEFINED (_int_irq5)?ABSOLUTE (_int_irq5):ABSOLUTE (_start)
+                0x00000048        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x0000004c        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000050        0x4 LONG 0x100 DEFINED (_int_wovi)?ABSOLUTE (_int_wovi):ABSOLUTE (_start)
+                0x00000054        0x4 LONG 0x100 DEFINED (_int_cmi)?ABSOLUTE (_int_cmi):ABSOLUTE (_start)
+                0x00000058        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x0000005c        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000060        0x4 LONG 0x100 DEFINED (_int_imia0)?ABSOLUTE (_int_imia0):ABSOLUTE (_start)
+                0x00000064        0x4 LONG 0x100 DEFINED (_int_imib0)?ABSOLUTE (_int_imib0):ABSOLUTE (_start)
+                0x00000068        0x4 LONG 0x100 DEFINED (_int_ovi0)?ABSOLUTE (_int_ovi0):ABSOLUTE (_start)
+                0x0000006c        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000070        0x4 LONG 0x100 DEFINED (_int_imia1)?ABSOLUTE (_int_imia1):ABSOLUTE (_start)
+                0x00000074        0x4 LONG 0x100 DEFINED (_int_imib1)?ABSOLUTE (_int_imib1):ABSOLUTE (_start)
+                0x00000078        0x4 LONG 0x100 DEFINED (_int_ovi1)?ABSOLUTE (_int_ovi1):ABSOLUTE (_start)
+                0x0000007c        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000080        0x4 LONG 0x100 DEFINED (_int_imia2)?ABSOLUTE (_int_imia2):ABSOLUTE (_start)
+                0x00000084        0x4 LONG 0x100 DEFINED (_int_imib2)?ABSOLUTE (_int_imib2):ABSOLUTE (_start)
+                0x00000088        0x4 LONG 0x100 DEFINED (_int_ovi2)?ABSOLUTE (_int_ovi2):ABSOLUTE (_start)
+                0x0000008c        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x00000090        0x4 LONG 0x100 DEFINED (_int_imia3)?ABSOLUTE (_int_imia3):ABSOLUTE (_start)
+                0x00000094        0x4 LONG 0x100 DEFINED (_int_imib3)?ABSOLUTE (_int_imib3):ABSOLUTE (_start)
+                0x00000098        0x4 LONG 0x100 DEFINED (_int_ovi3)?ABSOLUTE (_int_ovi3):ABSOLUTE (_start)
+                0x0000009c        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x000000a0        0x4 LONG 0x100 DEFINED (_int_imia4)?ABSOLUTE (_int_imia4):ABSOLUTE (_start)
+                0x000000a4        0x4 LONG 0x100 DEFINED (_int_imib4)?ABSOLUTE (_int_imib4):ABSOLUTE (_start)
+                0x000000a8        0x4 LONG 0x100 DEFINED (_int_ovi4)?ABSOLUTE (_int_ovi4):ABSOLUTE (_start)
+                0x000000ac        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x000000b0        0x4 LONG 0x100 DEFINED (_int_dend0a)?ABSOLUTE (_int_dend0a):ABSOLUTE (_start)
+                0x000000b4        0x4 LONG 0x100 DEFINED (_int_dend0b)?ABSOLUTE (_int_dend0b):ABSOLUTE (_start)
+                0x000000b8        0x4 LONG 0x100 DEFINED (_int_dend1a)?ABSOLUTE (_int_dend1a):ABSOLUTE (_start)
+                0x000000bc        0x4 LONG 0x100 DEFINED (_int_dend1b)?ABSOLUTE (_int_dend1b):ABSOLUTE (_start)
+                0x000000c0        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x000000c4        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x000000c8        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x000000cc        0x4 LONG 0x100 ABSOLUTE (_start)
+                0x000000d0        0x4 LONG 0x100 DEFINED (_int_eri0)?ABSOLUTE (_int_eri0):ABSOLUTE (_start)
+                0x000000d4        0x4 LONG 0x100 DEFINED (_int_rxi0)?ABSOLUTE (_int_rxi0):ABSOLUTE (_start)
+                0x000000d8        0x4 LONG 0x100 DEFINED (_int_txi0)?ABSOLUTE (_int_txi0):ABSOLUTE (_start)
+                0x000000dc        0x4 LONG 0x100 DEFINED (_int_tei0)?ABSOLUTE (_int_tei0):ABSOLUTE (_start)
+                0x000000e0        0x4 LONG 0x100 DEFINED (_int_eri1)?ABSOLUTE (_int_eri1):ABSOLUTE (_start)
+                0x000000e4        0x4 LONG 0x100 DEFINED (_int_rxi1)?ABSOLUTE (_int_rxi1):ABSOLUTE (_start)
+                0x000000e8        0x4 LONG 0x100 DEFINED (_int_txi1)?ABSOLUTE (_int_txi1):ABSOLUTE (_start)
+                0x000000ec        0x4 LONG 0x100 DEFINED (_int_tei1)?ABSOLUTE (_int_tei1):ABSOLUTE (_start)
+                0x000000f0        0x4 LONG 0x100 DEFINED (_int_adi)?ABSOLUTE (_int_adi):ABSOLUTE (_start)
+ FILL mask 0xff
+
+.text           0x00000100      0x20a
+ CREATE_OBJECT_SYMBOLS
+ *(.text)
+ .text          0x00000100       0x44 C:\Users\minor\AppData\Local\Temp\cclsU7Ec.o
+                0x00000100                _start
+                0x00000140                _exit
+ .text          0x00000144      0x1c6 C:\Users\minor\AppData\Local\Temp\ccgITbEi.o
+                0x00000144                _main
+                0x00000166                _sci_init
+                0x000001be                _sci_get_char
+                0x0000021c                _sci_print_char
+                0x00000268                _timer_init
+                0x00000298                _wait
+                0x0000030a                etext = .
+
+.init
+ *(.init)
+
+.fini
+ *(.fini)
+
+.got
+ *(.got)
+ *(.got.plt)
+
+.rodata         0x0000030a        0x0
+ *(.rodata)
+ *(.rodata.*)
+                0x0000030a                _erodata = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.jcr
+ *(.jcr)
+
+.tors           0x0000030a       0x10
+                0x0000030a                __CTOR_LIST__ = .
+                0x0000030a        0x4 LONG 0x0 (((__CTOR_END__ - __CTOR_LIST__) / 0x4) - 0x2)
+                0x0000030e                ___ctors = .
+ *(.ctors)
+                0x0000030e                ___ctors_end = .
+                0x0000030e        0x4 LONG 0x0
+                0x00000312                __CTOR_END__ = .
+                0x00000312                __DTOR_LIST__ = .
+                0x00000312        0x4 LONG 0x0 (((__DTOR_END__ - __DTOR_LIST__) / 0x4) - 0x2)
+                0x00000316                ___dtors = .
+ *(.dtors)
+                0x00000316                ___dtors_end = .
+                0x00000316        0x4 LONG 0x0
+                0x0000031a                __DTOR_END__ = .
+                0x0000031a                _mdata = .
+
+.data           0x00ffdf10        0x0 load address 0x0000031a
+                0x00ffdf10                _data = .
+ *(.data)
+ .data          0x00ffdf10        0x0 C:\Users\minor\AppData\Local\Temp\cclsU7Ec.o
+ .data          0x00ffdf10        0x0 C:\Users\minor\AppData\Local\Temp\ccgITbEi.o
+ *(.data.*)
+                0x00ffdf10                _edata = .
+
+.gcc_exc
+ *(.gcc_exc)
+
+.bss            0x00ffdf10        0x0 load address 0x0000031a
+                0x00ffdf10                _bss = .
+ *(.bss)
+ .bss           0x00ffdf10        0x0 C:\Users\minor\AppData\Local\Temp\cclsU7Ec.o
+ .bss           0x00ffdf10        0x0 C:\Users\minor\AppData\Local\Temp\ccgITbEi.o
+ *(COMMON)
+                0x00ffdf10                _ebss = .
+                0x00ffdf10                _end = .
+
+.stack          0x00ffff0c        0x0
+                0x00ffff0c                _stack = .
+ *(.stack)
+
+.eight
+ *(.eight)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+/DISCARD/
+ *(.comment)
+OUTPUT(5i11tsutsuiminoruh801.exe elf32-h8300)

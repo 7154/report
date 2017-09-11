@@ -1,0 +1,651 @@
+\documentclass{jsarticle}
+%\pagestyle{empty}%ページ非表示
+%usepackage{fancyhdr}%ヘッダ
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[top=30truemm,bottom=30truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage{ulem}
+\begin{document}
+%ここから
+
+%\lhead{左ヘッダ}
+%\chead{中央ヘッダ}
+%\rhead{右ヘッダ}
+
+%\title{}
+%\author{}
+%\maketitle
+
+%\part*{部}
+%\chapter*{章}
+%\section*{節}
+%\subsection*{小節}
+%\subsubsection*{少々節}
+%改行\\
+%\par
+%改ページ\newpage
+
+\section{目的}
+LaTeXを用いて活版印刷に劣らない美しい
+組版処理を行うための手法を取得し、
+PDFファイルへの出力を行う。
+また、LaTeXを用いると、複雑なフォント指定や
+数式、画像、図、今日の出力が容易にでき、
+目次、索引、ページ番号、文献参照なども
+自動的に行うことができるようになる。
+
+\section{使用機器}
+\begin{table}[hbtp]
+ \caption{使用機器}
+ \label{siyou}
+ \centering
+  \begin{tabular}{|c|c|}\hline
+			実験機器名&ノートパソコン\\ \hline
+  \end{tabular}
+\end{table}
+
+
+\section{方法}
+本実験ではレポートの作成が実験である。
+結果の欄で
+\TeX
+の機能を紹介し実行、
+成功したら\verb|\begin{verbatim}|と
+\verb|\end{verbatim}|の間にコピーする。
+使う機能は文章の改行や
+フォントのサイズや種類の変更、
+図表の表示、数式の作成等である。\par
+本実験中使用する機能の内の
+\verb|\sout|に必要なパッケージ
+である\verb|ulem.sty|がなかったので、\\
+\begin{center}
+\verb|http://www.ctan.org/tex-archive/macros/latex/contrib/ulem|\\
+\end{center}
+からダウンロードして
+\LaTeX
+のディレクトリにstyファイルを配置した。
+
+\section{結果}
+\subsection{そのまま表示}
+\TeX
+で実行してほしくないコマンドを書くときに使う。
+
+\begin{verbatim*}
+\TeX
+で書きました\\
+\verb|\TeX|
+で書きました
+\begin{verbatim}
+\TeXと\verb|\TeX|
+\end{verbatim}
+\end{verbatim*}
+
+\noindent
+\TeX
+で書きました\\
+\verb|\TeX|で書きました
+\begin{verbatim}
+\TeXと\verb|\TeX|
+\end{verbatim}
+
+
+\subsection{改行}
+
+TeXで改行がしたい場合はそのまま
+改行しても改行されない、
+改行するためには改行コマンドを入れる。
+改行のコマンドには\verb|\\|を使う。
+
+\begin{verbatim}
+ここから改行、\\ここまで改行、
+改行されない。
+\end{verbatim}
+
+ここから改行、\\ここまで改行、
+改行されない。
+
+\subsection{改段落}
+
+また改段落するときのコマンドもある。
+改段落のコマンドは\verb|\par|を使い、
+コマンドの後に改行をして改段落が行われる。
+
+\begin{verbatim}
+ここから改段落、\par
+ここまで改段落、
+改段落されない。
+\end{verbatim}
+
+ここから改段落、\par
+ここまで改段落、
+改段落されない。
+
+
+\subsection{ロゴ}
+TeX,LaTeXのロゴを表示する。
+
+\begin{verbatim}
+\TeX\par
+\LaTeX
+\end{verbatim}
+
+\TeX\par
+\LaTeX
+
+\subsection{フォントの大きさ}
+フォントのサイズを変換するコマンドもある。
+以下に5つ例を記す。
+
+\begin{verbatim}
+\tiny 5pt \\
+\small 9pt \\
+\normalsize 10pt(標準) \\
+\LARGE 17.28pt \\
+\Huge 24.88pt \\
+\end{verbatim}
+
+{
+\noindent
+\tiny 5pt \\
+\small 9pt \\
+\normalsize 10pt(標準) \\
+\LARGE 17.28pt \\
+\Huge 24.88pt \\
+}
+
+\subsection{書体}
+書体を変えることも可能、
+日本語はゴシック体、明朝体。
+英語はroman体、sans seriff体を例に記す。
+
+\begin{verbatim}
+\gt ABC いろは ゴシック体 \\
+\mc ABC いろは 明朝体 \\
+\rm ABC いろは roman \\
+\sf ABC いろは sans seriff \\
+\end{verbatim}
+
+{
+\noindent
+\gt ABC いろは ゴシック体 \\
+\mc ABC いろは 明朝体 \\
+\rm ABC いろは roman \\
+\sf ABC いろは sans seriff \\
+}
+
+\subsection{太字、イタリックアンダーライン、取り消し線}
+文章の中で、強調したい部分などに使う。
+
+\begin{verbatim}
+\textbf {太字} \\
+\textit {italic} \\
+\underline {アンダーライン} \\
+\sout {取り消し線} \\
+\end{verbatim}
+
+{
+\noindent
+\textbf {太字} \\
+\textit {italic} \\
+\underline {アンダーライン} \\
+\sout {取り消し線} \\
+}
+
+\subsection{左寄せ、右寄せ、中央寄せ}
+文字列の左寄せ、右寄せ、中央寄せを行うコマンド。
+
+\begin{verbatim}
+\begin{flushleft}
+		左寄せ
+\end{flushleft}
+\begin{center}
+		中央寄せ
+\end{center}
+\begin{flushright}
+		右寄せ
+\end{flushright}
+\end{verbatim}
+
+{
+\begin{flushleft}
+		左寄せ
+\end{flushleft}
+\begin{center}
+		中央寄せ
+\end{center}
+\begin{flushright}
+		右寄せ
+\end{flushright}
+}
+
+\subsection{箇条書き}
+箇条書きには記号付き、番号付き、見出し付きがある。
+
+\begin{verbatim}
+記号付き\\
+\begin{itemize}
+				\item item1
+				\item item2
+				\item item3
+\end{itemize}
+\noindent
+番号付き\\
+\begin{enumerate}
+				\item item1
+				\item item2
+				\item item3
+\end{enumerate}
+\noindent
+見出し付き\\
+\begin{description}
+		\item[その1] item1
+		\item[その2] item2
+		\item[その3] item3
+\end{description}
+\end{verbatim}
+
+{
+\noindent
+記号付き\\
+\begin{itemize}
+				\item item1
+				\item item2
+				\item item3
+\end{itemize}
+\noindent
+番号付き\\
+\begin{enumerate}
+				\item item1
+				\item item2
+				\item item3
+\end{enumerate}
+\noindent
+見出し付き\\
+\begin{description}
+		\item[その1] item1
+		\item[その2] item2
+		\item[その3] item3
+\end{description}
+}
+
+
+\subsubsection{画像}
+画像ファイルの取得と表示もしてくれる、
+画像ファイルは相対パスもしくは
+絶対パスで指定する。\par
+\verb|\includegraphics|の後に大カッコ\verb|"[]"|
+内にオプションを記入する。
+\verb|scale|オプションは画像の拡大縮小を行う、
+記入する数値は拡大縮小率である。
+
+\begin{verbatim}
+\begin{figure}[htbp]
+		\includegraphics[scale=0.6]{/home/minoru/Desktop/sample.eps}
+\end{figure}
+\end{verbatim}
+
+\begin{figure}[htbp]
+		\includegraphics[scale=0.6]{/home/minoru/Desktop/sample.eps}
+\end{figure}
+
+また、画像のサイズを変更することもできる。
+\verb|widht|で幅、\verb|height|で高さを変える。
+\verb|\fbox{}|で中カッコ内に画像を挿入したら、
+画像を四角で囲う。
+\verb|\centering|をbeginとendの間に記入したら、
+中央寄せを行う。\par
+
+\begin{verbatim}
+\begin{figure}
+		\centering
+		\fbox{\includegraphics[width=5cm,height=10cm]{/home/minoru/Desktop/sample.eps}}
+\end{figure}
+\end{verbatim}
+
+\begin{figure}
+		\centering
+		\fbox{\includegraphics[width=5cm,height=10cm]{/home/minoru/Desktop/sample.eps}}
+\end{figure}
+
+\verb|\centering|でなくても上で紹介したように、
+\verb|begin{centering}|を用いることも可能で、
+右寄せ、左寄せも可能である。
+
+\begin{verbatim}
+\begin{figure}[htbp]
+		\begin{flushleft}
+				\includegraphics[scale=0.1]{/home/minoru/Desktop/sample.eps}
+		\end{flushleft}
+\end{figure}
+\begin{figure}[htbp]
+		\begin{center}
+				\includegraphics[scale=0.1]{/home/minoru/Desktop/sample.eps}
+		\end{center}
+\end{figure}
+\begin{figure}[htbp]
+		\begin{flushright}
+				\includegraphics[scale=0.1]{/home/minoru/Desktop/sample.eps}
+		\end{flushright}
+\end{figure}
+\end{verbatim}
+
+\begin{figure}[htbp]
+		\begin{flushleft}
+				\includegraphics[scale=0.1]{/home/minoru/Desktop/sample.eps}
+		\end{flushleft}
+\end{figure}
+\begin{figure}[htbp]
+		\begin{center}
+				\includegraphics[scale=0.1]{/home/minoru/Desktop/sample.eps}
+		\end{center}
+\end{figure}
+\begin{figure}[htbp]
+		\begin{flushright}
+				\includegraphics[scale=0.1]{/home/minoru/Desktop/sample.eps}
+		\end{flushright}
+\end{figure}
+
+\verb|\caption{}|の中カッコ内に図題を入れる、
+図番は自動で割り振られる。
+\verb|\label{}|では図のラベルを入れる、
+\verb|\ref{}|でラベルを指定して、図番を参照する。\par
+
+\begin{verbatim}
+\begin{figure}[htbp]
+		\centering
+		\fbox{\includegraphics[scale=0.5]{/home/minoru/Desktop/sample.eps}}
+		\caption{ねこです}
+		\label{cat}
+\end{figure}
+
+図\ref{cat}はねこです。\\
+\end{verbatim}
+
+\begin{figure}[htbp]
+		\centering
+		\fbox{\includegraphics[scale=0.5]{/home/minoru/Desktop/sample.eps}}
+		\caption{ねこです}
+		\label{cat}
+\end{figure}
+
+図\ref{cat}はねこです。\\
+
+\subsection{表}
+表を作成してくれるコマンドです。
+図と同じく\verb|\caption,\label|
+で表題とラベルをつけて、参照することができる。\par
+
+\begin{verbatim}
+\begin{table}[htbp]
+	\caption{ねこです}
+	\label{nekodesu}
+	\begin{tabular}{|r|c|l|} \hline
+	右詰め&真ん中&左詰め \\ \hline
+	\end{tabular}
+\end{table}
+
+表\ref{nekodesu}はねこです。\\
+\end{verbatim}
+
+\begin{table}[htbp]
+	\centering
+	\caption{ねこです}
+	\label{nekodesu}
+	\begin{tabular}{|r|c|l|} \hline
+	右詰め&真ん中&左詰め \\ \hline
+	\end{tabular}
+\end{table}
+
+表\ref{nekodesu}はねこです。\par
+
+\subsection{minipage}
+
+表は図と同じように\verb|\begin{figure}|
+で囲うと図として扱われる。
+\verb|\begin{figure}|内で\verb|\begin{minipage}|
+を使うと、図や表を並べて表示することができる。\par
+
+\begin{verbatim}
+\begin{figure}
+		\begin{minipage}{0.55555\hsize}
+				\begin{center}
+						\fbox{\includegraphics[scale=0.5]{/home/minoru/Desktop/sample.eps}}
+						\caption{ねこです}
+						\label{thiscat}
+				\end{center}
+		\end{minipage}
+		\begin{minipage}{0.5\hsize}
+				\begin{center}
+						\caption{ねこです}
+						\label{neko}
+						\begin{tabular}{rcl}
+								左詰め&真ん中&右詰め \\ \hline \hline
+						\end{tabular}
+				\end{center}
+				\end{minipage}
+\end{figure}
+\end{verbatim}
+
+\begin{figure}
+		\begin{minipage}{0.5\hsize}
+				\begin{center}
+						\fbox{\includegraphics[scale=0.5]{/home/minoru/Desktop/sample.eps}}
+						\caption{ねこです}
+						\label{thiscat}
+				\end{center}
+		\end{minipage}
+		\begin{minipage}{0.5\hsize}
+				\begin{center}
+						\caption{ねこです}
+						\label{neko}
+						\begin{tabular}{|r|c|l|} \hline
+								左詰め&真ん中&右詰め \\ \hline
+						\end{tabular}
+				\end{center}
+				\end{minipage}
+\end{figure}
+
+
+\subsection{数式}
+文章中に数式を書く場合は\verb|$|で囲う。\\
+
+\begin{verbatim}
+これは式です$y=f(x)$。
+\end{verbatim}
+
+これは式です$y=f(x)$。\\
+\par
+別行に式を書く場合は\verb|\[|と\verb|\]|
+で囲う。\\
+
+\begin{verbatim}
+これも式です\[y=ax~2\]これも式です。
+\end{verbatim}
+
+これも式です\[y=ax~2\]これも式です。\\
+\par
+数式番号を付ける場合には
+\verb|\begin{equation}と\end{equation}|
+で囲い、図番を参照するためのラベルは
+囲った間に入れる。
+
+\begin{verbatim}
+式です
+\begin{equation}
+		y=5 \label{shiki}
+\end{equation}
+式\ref{shiki}は式です。
+\end{verbatim}
+
+式です
+\begin{equation}
+		y=5 \label{shiki}
+\end{equation}
+式\ref{shiki}は式です。\\
+
+\subsection{分数}
+分数を表示を表示するには、
+\verb|\[\frac{分子}{分母}\]|
+となる。
+
+\begin{verbatim}
+分数です\[\frac{1}{2}\]
+\end{verbatim}
+
+分数です\[\frac{1}{2}\]\\
+\par
+文章中に分数を表示するには
+\verb|$\frack{分子}{分母}$|でできる。
+
+\begin{verbatim}
+分数です$\frac{1}{3}$
+\end{verbatim}
+
+分数です$\frac{1}{3}$\\
+
+\subsection{微分}
+微分の表示する方法を左に、
+右に実行結果を記す。
+
+\begin{minipage}{0.5\hsize}
+		\begin{verbatim}
+		\[y'=x^2+x+1\]
+		\[y''=x^2+x+1\]
+		\[\dot{y}=x^2+x+1\]
+		\[\ddot{y}=x^2+x+1\]
+		\[\frac{dy}{dx}=x^2+x+1\]
+		\[\frac{d^2y}{dx^2}=x^2+x+1\]
+		\[\frac{\partial f}{\partial x}=x^2+x+1\]
+		\[\frac{\partial^2 f}{\partial x^2}=x^2+x+1\]
+		\end{verbatim}
+\end{minipage}
+\begin{minipage}{0.5\hsize}
+		\[y'=x^2+x+1\]
+		\[y''=x^2+x+1\]
+		\[\dot{y}=x^2+x+1\]
+		\[\ddot{y}=x^2+x+1\]
+		\[\frac{dy}{dx}=x^2+x+1\]
+		\[\frac{d^2y}{dx^2}=x^2+x+1\]
+		\[\frac{\partial f}{\partial x}=x^2+x+1\]
+		\[\frac{\partial^2 f}{\partial x^2}=x^2+x+1\]
+\end{minipage}
+
+\subsection{積分}
+積分は\verb|\int_{上限}^{下限} 被積分関数 dx|で表示する。
+
+\begin{verbatim}
+積分です$y=\int_{5}^{1} x^2 dx$ 
+これも積分です\[y=\int_{5}^{1} x^2 dx\]
+\end{verbatim}
+
+積分です$y=\int_{5}^{1} x^2 dx$ 
+これも積分です\[y=\int_{5}^{1} x^2 dx\]
+
+\subsection{その他の数式}
+\{による場合分け表示を下に記す。
+
+\begin{verbatim}
+\begin{equation}
+		f(x)= \left\{
+				\begin{array}{}
+						1 (x=1のとき)\\
+						0 (x≠1のとき)
+				\end{array}
+				\right.
+\end{equation}
+\end{verbatim}
+
+\begin{equation}
+		f(x)= \left\{
+				\begin{array}{}
+						1 (x=1のとき)\\
+						0 (x≠1のとき)
+				\end{array}
+				\right.
+\end{equation}\\
+\par
+
+上付き文字は\verb|^{上付き文字}|で表示し、
+ドットは\verb|\dot|で表示する。
+
+\begin{verbatim}
+上付き文字$x^{2}$\\
+ドット$\dot{x}$
+\end{verbatim}
+
+\noindent
+上付き文字$x^{2}$\\
+ドット$\dot{x}$\\
+\par
+
+下付き文字は\verb|_{下付き文字}|で表示する。
+
+\begin{verbatim}
+下付き文字$a_{n}$\\
+こんなことも可能\[{}_{n}C_{k}\]
+こんなことも\[{}^{i}_{j}T^{k}_{h}\]
+\end{verbatim}
+
+\noindent
+下付き文字$a_{n}$\\
+こんなことも可能\[{}_{n}C_{k}\]
+こんなことも\[{}^{i}_{j}T^{k}_{h}\]
+\par
+
+根号は\verb|\sqrt[乗根]{数文字}|で表示する。
+
+\begin{verbatim}
+$\sqrt{x}\sqrt[3]{x}$
+\end{verbatim}
+
+\noindent
+$\sqrt{x}\sqrt[3]{x}$\\
+\par
+
+\subsection{参考文献}
+使用した参考文献一覧の作成は
+\verb|\begin{thebibliography}|で行う。
+\verb|\begin{thebibliography}|の後ろの
+中カッコ内には数字を入れる、
+参考文献の数が9以下なら9、
+99以下なら99の様に書く。
+
+\begin{verbatim}
+ねこです\cite{neko}の著者ねこは、
+とらのきもち\cite{tora}の定期購読をしている。
+
+\begin{thebibliography}{9}
+\bibitem{sanko} 参考文献名,著者名
+\bibitem{neko} ねこです,ねこ
+\bibitem{tora} とらのきもち,DJ KOYA
+\bibitem{inu} いぬのきもち,DJ KOYA
+\end{thebibliography}
+\end{verbatim}
+
+ねこです\cite{neko}の著者ねこは、
+とらのきもち\cite{tora}の定期購読をしている。
+
+\begin{thebibliography}{9}
+\bibitem{sanko} 参考文献名,著者名
+\bibitem{neko} ねこです,ねこ
+\bibitem{tora} とらのきもち,DJ KOYA
+\bibitem{inu} いぬのきもち,DJ KOYA
+\end{thebibliography}
+
+\section{考察}
+本実験では
+\LaTeX
+を用いてレポートを作成したが、
+レポートの作成に必要な機能が一通り揃っているため、
+ストレス無くレポートの作成ができた。
+今回のレポートで紹介した機能はまだ一部である、
+他の機能を使うことにより論文記述や数学の問題作成、
+楽譜の作成まで出来る。
+これらの機能を組み合わせることにより、
+レポートにとどまらず、思い思いの文書
+(パンフレットやライブチケット等)を
+作成することができると思う。
+
+
+
+%ここまで
+\end{document}

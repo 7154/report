@@ -1,0 +1,183 @@
+\documentclass{jsarticle}
+%\pagestyle{empty}%ページ非表示
+\usepackage{fancyhdr}%ヘッダ
+\pagestyle{fancy}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[top=30truemm,bottom=30truemm,left=20truemm,right=20truemm]{geometry}
+\begin{document}
+%ここから
+\rhead[5I-11:筒居 稔]{5I-11:筒居 稔}
+
+
+\section{目的}
+Spice系回路シミュレータである
+μCAP9を使って、
+回路シミュレーションおよび
+設計した回路の制作および特性を測定する。
+波形整形回路の過度解析や
+増幅回路の交流解析を行う。
+
+\section{原理}
+\subsection{回路シミュレートを行うことのメリット}
+\begin{itemize}
+				\item 部品、実験ボード、測定器などがいらないため、コスト削減できる。
+				\item 各手配等、工程を省けるため、時間の短縮になる。
+				\item 実測不可能なものも測ることができる。
+				\item 感電等の心配が無いため安全である。
+\end{itemize}
+
+\subsection{回路シミュレーションの限界}
+\begin{itemize}
+				\item 大体の回路規模は、2万〜3万素子程度が限界、これ以上規模が大きくなると、意味のある時間で処理が終わらない。
+\end{itemize}
+
+\section{方法}
+\begin{enumerate}
+				\item 回路を回路シミュレータに書き込み実行。
+				\item 得られた波形データを保存。
+\end{enumerate}
+
+\section{使用機器}
+表\ref{use}に使用機器を示す。
+\begin{table}[htbp]
+		\centering
+		\caption{使用機器}
+		\label{use}
+		\begin{tabular}{|c|c|c|c|}\hline
+				名称&メーカ&型番&個数 \\ \hline
+				波形生成器&GW INSTEK&GAG-810&1 \\ \hline
+				電源&GW INSTEK&GPS-18500&1 \\ \hline
+				オシロスコープ&GW INSTEK&GDS-1052-U&1 \\ \hline
+				ノートパソコン&DELL&& \\ \hline
+		\end{tabular}
+\end{table}
+
+\section{結果}
+実験方法の手順通りに回路をシミュレータで作成し、
+その波形のデータを保存した。
+保存した結果を下に記す。
+
+\subsection{回路d}
+図\ref{dskairo}は回路dの回路図であり、
+図\ref{dshakei}はその波形である。
+\begin{figure}[htpb]
+		\begin{minipage}{0.45\hsize}
+				\centering
+				\fbox{\includegraphics[scale=1]{/home/minoru/Desktop/zikken/zik8/dskairo.png}}
+				\caption{回路d回路図}
+				\label{dskairo}
+		\end{minipage}
+		\begin{minipage}{0.3\hsize}
+				\centering
+				\fbox{\includegraphics[scale=0.3]{/home/minoru/Desktop/zikken/zik8/dshakei.png}}
+				\caption{回路d波形}
+				\label{dshakei}
+		\end{minipage}
+\end{figure}
+
+\subsection{無安定バイブレータ}
+図\ref{mbkairo}は無安定バイブレータの回路図であり、
+図\ref{mbhakei}はその波形である。
+\begin{figure}[htpb]
+		\begin{minipage}{0.45\hsize}
+				\centering
+			\fbox{\includegraphics[scale=0.4]{/home/minoru/Desktop/zikken/zik8/mbkairo.jpg}}
+				\caption{無安定バイブレータ回路図}
+				\label{mbkairo}
+		\end{minipage}
+		\begin{minipage}{0.3\hsize}
+				\centering
+				\fbox{\includegraphics[scale=0.3]{/home/minoru/Desktop/zikken/zik8/mbhakei.jpg}}
+				\caption{無安定バイブレータ波形}
+				\label{mbhakei}
+		\end{minipage}
+\end{figure}
+
+\subsection{シュミットトリガ}
+図\ref{smkairo}はシュミットトリガの回路図であり、
+図\ref{smhakei}はその波形である。
+\begin{figure}[htpb]
+		\begin{minipage}{0.45\hsize}
+				\centering
+				\fbox{\includegraphics[scale=0.4]{/home/minoru/Desktop/zikken/zik8/smkairo.png}}
+				\caption{シュミットトリガ回路図}
+				\label{smkairo}
+		\end{minipage}
+		\begin{minipage}{0.3\hsize}
+				\centering
+				\fbox{\includegraphics[scale=0.3]{/home/minoru/Desktop/zikken/zik8/smhakei.png}}
+				\caption{シュミットトリガ波形}
+				\label{smhakei}
+		\end{minipage}
+\end{figure}
+
+\subsection{CR位相波形回路}
+図\ref{crkairo}はCR位相波形回路の回路図であり、
+図\ref{crhakei}はその波形である。
+\begin{figure}[htpb]
+				\centering
+				\fbox{\includegraphics[scale=0.5]{/home/minoru/Desktop/zikken/zik8/crkairo.png}}
+				\caption{CR位相波形回路回路図}
+				\label{crkairo}
+\end{figure}
+\begin{figure}[htpb]
+				\centering
+				\fbox{\includegraphics[scale=0.3]{/home/minoru/Desktop/zikken/zik8/crhakei.png}}
+				\caption{CR位相波形回路波形}
+				\label{crhakei}
+\end{figure}
+
+\section{考察}
+以下に実際に回路を作成し測定した波形を記す。
+\begin{figure}[htbp]
+		\centering
+		\fbox{\includegraphics[scale=0.2]{/home/minoru/Desktop/zikken/npic/38816.jpg}}
+		\caption{回路d}
+		\label{dskairor}
+\end{figure}
+
+\begin{figure}[htbp]
+		\centering
+		\fbox{\includegraphics[scale=0.2]{/home/minoru/Desktop/zikken/zik8/38815.jpg}}
+		\caption{無安定バイブレータ}
+		\label{mbkairou}
+\end{figure}
+
+回路dはローパスフィルタである、
+論理値では電圧が2.5[V]低下するはずが、
+シミュレーションでは1.9[V]しか低下しなかった。
+これはシミュレーションの設定を誤ってしまい
+入力が直流になってしまったためである。
+そのため実機の測定とは異なる結果になった。
+実測では2.0[V]の電圧の低下が測定できた。\\
+
+無安定バイブレータの周期の理論値は
+\[周期=2(0.69CR)=2(0.69*180*10^{3}*200*10^{-12})=4.968*10^{-5}[s]\]
+となるが、シミュレーションの結果では$43*10^{-6}[s]$となり、
+実測では$55*10^{-6}[s]$となった。
+シミュレーション、実測共に理論値と誤差が生じたが、
+実測値がシミュレーションよりも理論値との誤差が少なく、
+シミュレーションよりも制度が良いことがわかった。\\
+
+シュミットトリガ回路はシミュレーションの結果、
+3.8VでON,OFFが切り替わる。理論値では2.5V低下であるが、
+実際には1.9Vであった。これは
+ダイオードの立ち上がり電圧が原因と思われる。\\
+
+CR位相波形回路は理論値では下記の式の結果300[Hz]となり、
+\[f=\frac{1}{2}\pi\sqrt{6CR}=\frac{1}{2}\pi\sqrt{6*0.12*10^{-6}*1.8*10^{3}}≒300[Hz]\]
+シミュレーション結果は40[ms]で
+10回振動したため周波数は250[Hz]であった、
+これは計測時にグラフに目盛りを表示していなかったため、
+読み取り時に人為的な誤差が生じたと思われる。
+
+%\part*{部}
+%\chapter*{章}
+%\subsection*{小節}
+%\subsubsection*{少々節}
+%改行\\
+%\par
+%改ページ\newpage
+
+%ここまで
+\end{document}

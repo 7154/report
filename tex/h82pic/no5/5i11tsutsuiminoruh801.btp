@@ -1,0 +1,99 @@
+[PROJECT]
+SOURCEFILE="5i11tsutsuiminoruh801.c"
+MODIFY="2017/04/27 12:03:54"
+V_MAJOR="2"
+V_MINOR="5"
+V_RELEASE="1"
+V_BUILD="0"
+CURPOS=0
+[TARGET]
+NAME="H8/3052F (Flash)"
+SelExtCompile=0
+[GCC]
+InstallFolder="C:\Program Files (x86)\BestTech\GCC Developer Lite\GCC\H8"
+Target="h8300-elf"
+OptimizeLevel=0
+TargetList.Count=1
+TargetList.0="h8300-elf"
+[AS]
+StartUpRoutine="C:\Program Files (x86)\BestTech\GCC Developer Lite\TARGET\3052F\h8crt0.s"
+StartUpRoutineList.Count=1
+StartUpRoutineList.0="C:\Program Files (x86)\BestTech\GCC Developer Lite\TARGET\3052F\h8crt0.s"
+[LD]
+MakeMapFile=1
+ScriptFile="C:\Program Files (x86)\BestTech\GCC Developer Lite\TARGET\3052F\h8rom.x"
+ScriptFileList.Count=1
+ScriptFileList.0="C:\Program Files (x86)\BestTech\GCC Developer Lite\TARGET\3052F\h8rom.x"
+AddLib.Count=2
+AddLib.0="add3052"
+AddLib.1="m"
+[DBG]
+RUNCommand=""
+GDBCommand=""
+RUNBootOption="-h"
+GDBBootOption=""
+BuildOption=""
+GDBInitFile="C:\Program Files (x86)\BestTech\GCC Developer Lite\TARGET\3052F\gdb.ini"
+[Folder]
+IncludeFolder.Count=1
+IncludeFolder.0="C:\Program Files (x86)\BestTech\GCC Developer Lite\TARGET\3052F"
+LibraryFolder.Count=1
+LibraryFolder.0="C:\Program Files (x86)\BestTech\GCC Developer Lite\TARGET\3052F"
+[ETC]
+Option.Count=5
+Option.0="-mh"
+Option.1="-nostartfiles"
+Option.2="-fsigned-char"
+Option.3="-Wall"
+Option.4="-Wno-main -pipe"
+BinUtilOut=2
+FileSaveBeforGCC=1
+ObjCopyOption=""
+[FW]
+EnableBootFW=0
+NotBootDebug=0
+Silent=0
+ExtBootFile=""
+FWBootOpt=""
+ShutGDB=0
+[EXT_TOOL]
+FileSaveBeforCompile=1
+[EXT_TOOL0]
+Command=""
+Option=""
+Caption=""
+LinkExTool=0
+[EXT_TOOL1]
+Command=""
+Option=""
+Caption=""
+LinkExTool=0
+[EXT_TOOL2]
+Command=""
+Option=""
+Caption=""
+LinkExTool=0
+[EXT_Folder]
+SearchFolder.Count=0
+[EXT_DBG]
+GDBCommand=""
+GDBBootOption=""
+GDBInitFile=""
+MonitorFile=""
+[EXT_FW]
+Silent=0
+ExtBootFile=""
+FWBootOpt=""
+MonitorFile=""
+ShutGDB=0
+[MarkJump]
+Mark.0=-1
+Mark.1=-1
+Mark.2=-1
+Mark.3=-1
+Mark.4=-1
+Mark.5=-1
+Mark.6=-1
+Mark.7=-1
+Mark.8=-1
+Mark.9=-1

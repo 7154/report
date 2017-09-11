@@ -1,0 +1,357 @@
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2017.4.20)  9 JUL 2017 22:21
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**77
+(./77.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2016/02/01> patch level 0)
+Babel <3.9n> and hyphenation patterns for 11 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
+Document Class: jsarticle 2014/02/07 okumura
+LaTeX Info: Redefining \rmfamily on input line 352.
+LaTeX Info: Redefining \sffamily on input line 355.
+LaTeX Info: Redefining \ttfamily on input line 358.
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 423.
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 613.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 613.
+\fullwidth=\dimen118
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 7.68799pt on input line 760.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 7.68799pt on input line 760.
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\@abstractbox=\box41
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\js@tocl@width=\dimen119
+\@lnumwidth=\dimen120
+\bibindent=\dimen121
+LaTeX Info: Redefining \TeX on input line 1731.
+LaTeX Info: Redefining \LaTeX on input line 1757.
+LaTeX Info: Redefining \LaTeXe on input line 1782.
+\heisei=\count89
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def
+File: dvipdfmx.def 2015/11/04 v4.07 LaTeX color/graphics driver for dvipdfmx (T
+eX Live/ChoF)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)))
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
+\Gm@bindingoffset=\dimen124
+\Gm@wd@mp=\dimen125
+\Gm@odd@mp=\dimen126
+\Gm@even@mp=\dimen127
+\Gm@layoutwidth=\dimen128
+\Gm@layoutheight=\dimen129
+\Gm@layouthoffset=\dimen130
+\Gm@layoutvoffset=\dimen131
+\Gm@dimlist=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count93
+\lst@gtempboxa=\box42
+\lst@token=\toks17
+\lst@length=\count94
+\lst@currlwidth=\dimen132
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen133
+\lst@width=\dimen134
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen135
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box43
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/jlisting.sty
+Package: jlisting 2006/02/20 0.2 (Thor)
+\lst@nextchar=\count101
+\lst@inputfile=\read1
+) (./77.aux)
+\openout1 = `77.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=674.33032pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-25.36964pt
+* \headheight=20.0pt
+* \headsep=18.45792pt
+* \topskip=10.0pt
+* \footskip=28.45792pt
+* \marginparwidth=18.49374pt
+* \marginparsep=18.49374pt
+* \columnsep=18.49374pt
+* \skip\footins=16.0pt plus 5.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count102
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 16.60605pt on input line 16.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 16.60605pt on input line 16.
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 16.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 5.76599pt on input line 16.
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 27.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 27.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 27.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 27.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 32.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 32.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 33.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 33.
+[1
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 85.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 85.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 88.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 88.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 88.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 88.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 103.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 103.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+ [2] [3] [4] [5]
+[6] [7]
+File: /home/minoru/Desktop/zikken/npic/6276122747302.jpg Graphic file (type bmp
+)
+ </home/minoru/Desktop/zikken/npic/6276122747302.jpg>
+Overfull \hbox (3.95323pt too wide) in paragraph at lines 134--135
+ [] 
+ []
+
+File: /home/minoru/Desktop/zikken/npic/6276122485853.jpg Graphic file (type bmp
+)
+</home/minoru/Desktop/zikken/npic/6276122485853.jpg>
+Overfull \hbox (3.95323pt too wide) in paragraph at lines 141--142
+ [] 
+ []
+
+File: /home/minoru/Desktop/zikken/npic/6276122612221.jpg Graphic file (type bmp
+)
+</home/minoru/Desktop/zikken/npic/6276122612221.jpg>
+Overfull \hbox (3.95323pt too wide) in paragraph at lines 148--149
+ [] 
+ []
+
+
+! LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \begin{figure}[Htbp]
+                          
+? 
+File: /home/minoru/Desktop/zikken/npic/1499113804266.jpg Graphic file (type bmp
+)
+</home/minoru/Desktop/zikken/npic/1499113804266.jpg>
+
+! LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.162 \begin{figure}[Htbp]
+                          
+? 
+File: /home/minoru/Desktop/zikken/npic/1499113805609.jpg Graphic file (type bmp
+)
+</home/minoru/Desktop/zikken/npic/1499113805609.jpg>
+
+! LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 \begin{figure}[Htbp]
+                          
+? 
+File: /home/minoru/Desktop/zikken/npic/1499113806803.jpg Graphic file (type bmp
+)
+</home/minoru/Desktop/zikken/npic/1499113806803.jpg>
+File: /home/minoru/Desktop/zikken/npic/6276123451596.jpg Graphic file (type bmp
+)
+
+</home/minoru/Desktop/zikken/npic/6276123451596.jpg>
+File: /home/minoru/Desktop/zikken/npic/6276123002092.jpg Graphic file (type bmp
+)
+
+</home/minoru/Desktop/zikken/npic/6276123002092.jpg>
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 184--198
+[]$[]$ $[]$ 
+ []
+
+[8] [9]
+
+! LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.210 \begin{figure}[Htbp]
+                          
+? 
+File: /home/minoru/Desktop/firstprogram.png Graphic file (type bmp)
+</home/minoru/Desktop/firstprogram.png>
+File: /home/minoru/Desktop/secondprogram.png Graphic file (type bmp)
+
+</home/minoru/Desktop/secondprogram.png>
+Overfull \hbox (49.47911pt too wide) in paragraph at lines 220--221
+ [] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 211--225
+[]$[]$ $[]$ 
+ []
+
+[10] [11] (./77.aux) ) 
+Here is how much of TeX's memory you used:
+ 2737 strings out of 494865
+ 38897 string characters out of 6179769
+ 117058 words of memory out of 5000000
+ 6146 multiletter control sequences out of 15000+600000
+ 14867 words of font info for 67 fonts, out of 8000000 for 9000
+ 269 hyphenation exceptions out of 8191
+ 28i,8n,32p,290b,1454s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on 77.dvi (11 pages, 26484 bytes).
